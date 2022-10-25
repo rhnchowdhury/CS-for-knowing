@@ -2,7 +2,9 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import logo from '../logo/logo.jpg'
+import LeftNav from '../Navbar/LeftNav';
 
 const Header = () => {
     return (
@@ -13,8 +15,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#pricing">Courses</Nav.Link>
+                        <Link href="#features">Home</Link>
+                        <Link to='/course'>Courses</Link>
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">More deets</Nav.Link>
@@ -22,6 +24,9 @@ const Header = () => {
                             Dank memes
                         </Nav.Link>
                     </Nav>
+                    <div className='d-lg-none'>
+                        <LeftNav></LeftNav>
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar >
