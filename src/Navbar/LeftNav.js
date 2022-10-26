@@ -1,8 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { AuthContext } from '../Context/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const LeftNav = () => {
     const [lists, setList] = useState([]);
+    const { googleLogin } = useContext(AuthContext);
+
+
+    const googleProvider = new GoogleAuthProvider();
+    const handleGoogleLogin = () => {
+        googleLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
 
     useEffect(() => {
         fetch('http://localhost:5000/sub-list')
@@ -18,6 +34,9 @@ const LeftNav = () => {
                     <Link to={`/list/${list.id}`}>{list.sub_name}</Link>
                 </p>)
             }
+            <Button variant="outline-success" className='mb-2' onClick={handleGoogleLogin}><FaGoogle></FaGoogle> Login with Google</Button>
+            <Button variant="outline-dark"><FaGithub></FaGithub> Login with Github</Button>
+
         </div>
     );
 };
