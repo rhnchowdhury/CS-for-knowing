@@ -2,9 +2,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
-const ShowCourse = ({ course }) => {
-    // console.log(course)
-    const { sub_name, picture, details } = course;
+const ListShow = ({ st }) => {
+    const { sub_name, picture, details } = st;
     return (
         <div >
 
@@ -21,9 +20,7 @@ const ShowCourse = ({ course }) => {
             </CardGroup>
 
         </div>
-
-
     );
 };
 
-export default ShowCourse;
+export default ListShow;

@@ -23,6 +23,7 @@ export const routes = createBrowserRouter([
                 path: '/list/:id',
                 element: <List></List>,
                 loader: ({ params }) => fetch(`http://localhost:5000/subject/${params.id}`)
+                // loader: () => fetch(`http://localhost:5000/subject/01`)
             }
         ]
     }
