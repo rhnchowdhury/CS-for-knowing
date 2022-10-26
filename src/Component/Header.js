@@ -8,9 +8,16 @@ import { AuthContext } from '../Context/AuthProvider/AuthProvider';
 import logo from '../logo/logo.jpg'
 import LeftNav from '../Navbar/LeftNav';
 import Image from 'react-bootstrap/Image'
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error));
+    };
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -26,7 +33,21 @@ const Header = () => {
                         <Link to='/faq'>Faq</Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">{user?.displayName}</Nav.Link>
+                        <Nav.Link href="#deets">
+                            {
+                                user?.uid ?
+                                    <>
+                                        <span>{user?.displayName}</span>
+                                        <Button onClick={handleLogOut} variant="primary" className='ms-2'>Log out</Button>
+                                    </>
+                                    :
+                                    <>
+                                        {/* <Link to='/login'>Login</Link> */}
+                                        <Link to='/login'><Button variant="primary">Log in</Button></Link>
+                                    </>
+                            }
+
+                        </Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
                             {
                                 user?.photoURL ?
