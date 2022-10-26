@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
+import Blog from "../Pages/Blog";
 import Courses from "../Pages/Courses";
 import Home from "../Pages/Home";
 import List from "../Pages/List";
@@ -24,6 +25,10 @@ export const routes = createBrowserRouter([
                 element: <List></List>,
                 loader: ({ params }) => fetch(`http://localhost:5000/subject/${params.id}`)
                 // loader: () => fetch(`http://localhost:5000/subject/01`)
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             }
         ]
     }
