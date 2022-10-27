@@ -1,52 +1,51 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import Carousel from 'react-bootstrap/Carousel';
+import img1 from '../images/art-1.jpg'
+import img2 from '../images/art-2.jpg'
+import img3 from '../images/art-3.webp'
 
 const Home = () => {
     return (
-        <div>
-            <CardGroup>
-                <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This card has supporting text below as a natural lead-in to
-                            additional content.{' '}
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-                <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
-                    <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This card has even longer content than the
-                            first to show that equal height action.
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
-                </Card>
-            </CardGroup>
+        <div className='mt-5'>
+            <h2 className='mb-4'><strong className='fs-1 fw-bold text-warning'>Welcome</strong> to <span className='text-success'>Intelligence</span> world,</h2>
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        style={{ height: '450px' }}
+                        src={img1}
+                        alt=""
+                    />
+                    <Carousel.Caption>
+                        <p className='fs-4 fw-semibold'>“Machine intelligence is the last invention that humanity will ever need to make.” </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        style={{ height: '450px' }}
+                        src={img2}
+                        alt=""
+                    />
+                    <Carousel.Caption>
+                        <p className='fs-4 fw-semibold ' style={{ color: 'tomato' }}>“There is no reason and no way that a human mind can keep up with an AI machine by 2035.”</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        style={{ height: '450px' }}
+                        src={img3}
+                        alt=""
+                    />
+                    <Carousel.Caption>
+                        <p className='fs-4 fw-semibold text-danger'>
+                            “The sad thing about artificial intelligence is that it lacks artifice and therefore intelligence.”
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+
         </div>
     );
 };

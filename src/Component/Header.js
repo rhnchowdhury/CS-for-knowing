@@ -23,14 +23,17 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <img src={logo} width="30" height="30" className="align-top rounded-circle me-2" alt="" />
-                <Navbar.Brand href="#home">CS for knowing & doing</Navbar.Brand>
+                {/* <Navbar.Brand href="/">CS for knowing & doing</Navbar.Brand> */}
+                <Link className='text-decoration-none text-white' to='/'>CS for knowing & doing</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Link href="#features">Home</Link>
-                        <Link to='/course'>Courses</Link>
-                        <Link to='/blog'>Blog</Link>
-                        <Link to='/faq'>Faq</Link>
+                        <div style={{ marginLeft: '65%' }}>
+                            <Link className='text-decoration-none text-white me-5' to="/">Home</Link>
+                            <Link className='text-decoration-none text-white me-5' to='/course'>Courses</Link>
+                            <Link className='text-decoration-none text-white me-5' to='/blog'>Blog</Link>
+                            <Link className='text-decoration-none text-white' to='/faq'>Faq</Link>
+                        </div>
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">
@@ -43,7 +46,6 @@ const Header = () => {
                                     </>
                                     :
                                     <>
-                                        {/* <Link to='/login'>Login</Link> */}
                                         <Link to='/login'><Button variant="primary">Log in</Button></Link>
                                     </>
                             }

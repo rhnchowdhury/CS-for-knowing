@@ -6,11 +6,10 @@ const ShowCourse = ({ course }) => {
     // console.log(course)
     const { sub_name, picture, details } = course;
     return (
-        <div >
-
+        <div>
             <CardGroup>
                 <Card>
-                    <Card.Img variant="top" style={{ height: '100px', width: '200px' }} src={picture} />
+                    <Card.Img variant="" style={{ height: '150px', width: '300px' }} src={picture} />
                     <Card.Body>
                         <Card.Title>{sub_name}</Card.Title>
                         <Card.Text>
@@ -19,10 +18,7 @@ const ShowCourse = ({ course }) => {
                     </Card.Body>
                 </Card>
             </CardGroup>
-
         </div>
-
-
     );
 };
 

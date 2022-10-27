@@ -15,13 +15,12 @@ const LeftNav = () => {
     }, []);
 
     return (
-        <div>
-            {/* <Link to='/checkout'><Button variant='primary'>Get premium access</Button></Link> */}
+        <div className='mt-3'>
             <Link to='/checkout'><Button className=' p-2' style={{ backgroundColor: 'tomato' }}>Get premium access</Button></Link>
-            <h4>List: {lists.length}</h4>
+            <h4 className='mt-3'>Course List: {lists.length}</h4>
             {
                 lists.map(list => <p key={list.id}>
-                    <Link to={`/list/${list.id}`}>{list.sub_name}</Link>
+                    <Link to={`/list/${list.id}`}><Button variant="outline-success">{list.sub_name}</Button></Link>
                 </p>)
             }
         </div>
