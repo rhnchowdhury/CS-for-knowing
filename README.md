@@ -74,7 +74,7 @@ CS for knowing and doing
 
 ## Website live link
 
-
+https://cs-for-knowing-and-doing.web.app/
 ### functionality
 
 .It's created for CS student which they know about Artificial Intelligence.
