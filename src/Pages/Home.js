@@ -13,12 +13,6 @@ const Home = () => {
             <h2 className='mb-4'><strong className='fs-1 fw-bold text-warning'>Welcome</strong> to <span className='text-success'>Intelligence</span> world,</h2>
             <Carousel>
                 <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        style={{ height: '450px' }}
-                        src={img1}
-                        alt=""
-                    /> */}
                     <Image className="d-block w-100"
                         style={{ height: '450px' }}
                         src={img1}
@@ -28,12 +22,6 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        style={{ height: '450px' }}
-                        src={img2}
-                        alt=""
-                    /> */}
                     <Image className="d-block w-100"
                         style={{ height: '450px' }}
                         src={img2}
@@ -43,12 +31,6 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    {/* <img
-                        className="d-block w-100"
-                        style={{ height: '450px' }}
-                        src={img3}
-                        alt=""
-                    /> */}
                     <Image className="d-block w-100"
                         style={{ height: '450px' }}
                         src={img3}

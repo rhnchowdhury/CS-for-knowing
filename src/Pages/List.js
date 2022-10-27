@@ -6,8 +6,7 @@ const List = () => {
     const shows = useLoaderData();
     // console.log(shows)
     return (
-        <div>
-            <h4>list subject: {shows.length}</h4>
+        <div className='mt-5'>
             {
                 shows.map(course => <ShowCourse key={course.id} course={course}></ShowCourse>)
             }

@@ -9,6 +9,7 @@ import LeftNav from '../Navbar/LeftNav';
 import Image from 'react-bootstrap/Image'
 import { Button } from 'react-bootstrap';
 import './Header.css'
+import { ImBrightnessContrast } from "react-icons/im";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -48,13 +49,9 @@ const Header = () => {
                             }
 
                         </Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            {/* {
-                                user?.photoURL ?
-                                    <Image style={{ height: '30px' }} roundedCircle src={user.photoURL}></Image>
-                                    :
-                                    <FaUser></FaUser>
-                            } */}
+                        <Nav.Link className='ms-3' href="">
+
+                            <ImBrightnessContrast></ImBrightnessContrast>
                         </Nav.Link>
                     </Nav>
                     <div className='d-lg-none'>
