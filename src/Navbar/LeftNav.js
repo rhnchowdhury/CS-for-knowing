@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 
@@ -15,6 +16,8 @@ const LeftNav = () => {
 
     return (
         <div>
+            {/* <Link to='/checkout'><Button variant='primary'>Get premium access</Button></Link> */}
+            <Link to='/checkout'><Button className=' p-2' style={{ backgroundColor: 'tomato' }}>Get premium access</Button></Link>
             <h4>List: {lists.length}</h4>
             {
                 lists.map(list => <p key={list.id}>
