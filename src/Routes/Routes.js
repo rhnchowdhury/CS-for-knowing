@@ -8,6 +8,7 @@ import Home from "../Pages/Home";
 import List from "../Pages/List";
 import Login from "../Shared/Login";
 import Register from "../Shared/Register";
+import ErrorRoute from "./ErrorRoute";
 import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
@@ -24,12 +25,10 @@ export const routes = createBrowserRouter([
                 element: <Courses></Courses>,
                 loader: () => fetch(`http://localhost:5000/subject`)
             },
-
             {
                 path: '/list/:id',
                 element: <List></List>,
                 loader: ({ params }) => fetch(`http://localhost:5000/subject/${params.id}`)
-                // loader: () => fetch(`http://localhost:5000/subject/01`)
             },
             {
                 path: '/blog',
@@ -51,6 +50,10 @@ export const routes = createBrowserRouter([
                 path: '/checkout',
                 element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 // loader: ({ params }) => fetch(`http://localhost:5000/subject/${params.id}`)
+            },
+            {
+                path: '*',
+                element: <ErrorRoute></ErrorRoute>
             }
         ]
     }

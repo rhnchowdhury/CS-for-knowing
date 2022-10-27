@@ -8,7 +8,6 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-
             <Container>
                 <Row>
                     <Col lg='3' className='d-none d-lg-block'>

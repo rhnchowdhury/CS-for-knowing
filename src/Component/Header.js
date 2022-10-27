@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider/AuthProvider';
 import logo from '../logo/logo.jpg'
 import LeftNav from '../Navbar/LeftNav';
 import Image from 'react-bootstrap/Image'
 import { Button } from 'react-bootstrap';
+import './Header.css'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -23,26 +23,23 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <img src={logo} width="30" height="30" className="align-top rounded-circle me-2" alt="" />
-                {/* <Navbar.Brand href="/">CS for knowing & doing</Navbar.Brand> */}
-                <Link className='text-decoration-none text-white' to='/'>CS for knowing & doing</Link>
+                <Link className='text-decoration-none text-white fw-bold fs-4' to='/'>CS for knowing & doing</Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
-                        <div style={{ marginLeft: '65%' }}>
-                            <Link className='text-decoration-none text-white me-5' to="/">Home</Link>
-                            <Link className='text-decoration-none text-white me-5' to='/course'>Courses</Link>
-                            <Link className='text-decoration-none text-white me-5' to='/blog'>Blog</Link>
-                            <Link className='text-decoration-none text-white' to='/faq'>Faq</Link>
-                        </div>
+                    <Nav className="me-auto head">
+                        <Link className='text-decoration-none text-white me-5 fw-bold fs-5' to="/">Home</Link>
+                        <Link className='text-decoration-none text-white me-5 fw-bold fs-5' to='/course'>Courses</Link>
+                        <Link className='text-decoration-none text-white me-5 fw-bold fs-5' to='/blog'>Blog</Link>
+                        <Link className='text-decoration-none text-white fw-bold fs-5' to='/faq'>FAQ</Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">
+                        <Link className='text-decoration-none' to="">
                             {
                                 user?.uid ?
                                     <>
-                                        <span>{user?.displayName}</span>
-
-                                        <Button onClick={handleLogOut} variant="primary">Log out</Button>
+                                        <span className='me-2 text-white'>{user?.displayName}</span>
+                                        <Image style={{ height: '30px' }} roundedCircle src={user.photoURL}></Image>
+                                        <Button className='ms-2' onClick={handleLogOut} variant="primary">Log out</Button>
                                     </>
                                     :
                                     <>
@@ -50,14 +47,14 @@ const Header = () => {
                                     </>
                             }
 
-                        </Nav.Link>
+                        </Link>
                         <Nav.Link eventKey={2} href="#memes">
-                            {
+                            {/* {
                                 user?.photoURL ?
                                     <Image style={{ height: '30px' }} roundedCircle src={user.photoURL}></Image>
                                     :
                                     <FaUser></FaUser>
-                            }
+                            } */}
                         </Nav.Link>
                     </Nav>
                     <div className='d-lg-none'>

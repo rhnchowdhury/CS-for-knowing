@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../Context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -74,9 +74,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
+                <p>already have an account? Please, <Link className='text-decoration-none' to='/register'>Register</Link></p>
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>

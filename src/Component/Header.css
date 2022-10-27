@@ -1,0 +1,9 @@
+.head {
+    margin-left: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    .head {
+        margin-left: 0;
+    }
+}
