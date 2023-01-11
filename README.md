@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Website name:
+
+CS for knowing and doing
+
+## Website live link
+
+https://cs-for-knowing-and-doing.web.app/
+### functionality
+
+.It's created for CS student which they know about Artificial Intelligence.
+. Become a good programmer we have to good knowledge about Algorithm and Data structure
+.Present world being based on artificial day by day, so we should know more about AI.
+. I use Bootstrap framework for building this website
+. and also Vanila CSS.
