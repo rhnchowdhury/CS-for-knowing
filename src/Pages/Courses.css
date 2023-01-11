@@ -1,13 +1,13 @@
 .design {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 12px;
 }
 
 @media only screen and (max-width: 600px) {
     .design {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 5px;
+        gap: 8px;
     }
 }
