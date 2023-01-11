@@ -1,12 +1,13 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import useTitle from '../hooks/useTitle';
 import img1 from '../images/art-1.jpg'
 import img2 from '../images/art-2.jpg'
 import img3 from '../images/art-3.webp'
 
 const Home = () => {
-
+    useTitle('Home');
     return (
 
         <div className='mt-4'>

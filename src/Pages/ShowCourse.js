@@ -1,10 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import useTitle from '../hooks/useTitle';
 
 const ShowCourse = ({ course }) => {
     // console.log(course)
     const { sub_name, picture, details } = course;
+    useTitle(`${sub_name}`);
     return (
         <div>
             <CardGroup>

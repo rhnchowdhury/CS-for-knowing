@@ -1,7 +1,9 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import useTitle from '../hooks/useTitle';
 
 const Blog = () => {
+    useTitle('Blog')
     return (
         <div className='mt-5'>
             <Accordion>

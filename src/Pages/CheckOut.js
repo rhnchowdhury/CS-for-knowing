@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
 const CheckOut = () => {
     const [check2, setCheck2] = useState([]);
+    useTitle('Checkout');
 
     useEffect(() => {
         fetch('https://computer-science-for-knowing-and-doing-server-site.vercel.app/sub-list')
@@ -12,7 +14,7 @@ const CheckOut = () => {
     }, []);
 
     return (
-        <div>
+        <div className='mt-5'>
             <h3>checkout page</h3>
 
             {

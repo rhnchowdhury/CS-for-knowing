@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../Context/AuthProvider/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
+    useTitle('Register');
 
     const handleSubmit = event => {
         event.preventDefault();

@@ -9,6 +9,7 @@ const List = () => {
         <div className='mt-5'>
             {
                 shows.map(course => <ShowCourse key={course.id} course={course}></ShowCourse>)
+
             }
         </div>
     );
