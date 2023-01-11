@@ -23,12 +23,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/course',
                 element: <Courses></Courses>,
-                loader: () => fetch(`http://localhost:5000/subject`)
+                loader: () => fetch(`https://computer-science-for-knowing-and-doing-server-site.vercel.app/subject`)
             },
             {
                 path: '/list/:id',
                 element: <List></List>,
-                loader: ({ params }) => fetch(`http://localhost:5000/subject/${params.id}`)
+                loader: ({ params }) => fetch(`https://computer-science-for-knowing-and-doing-server-site.vercel.app/subject/${params.id}`)
             },
             {
                 path: '/blog',

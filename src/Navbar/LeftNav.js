@@ -6,7 +6,7 @@ const LeftNav = () => {
     const [lists, setList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/sub-list')
+        fetch('https://computer-science-for-knowing-and-doing-server-site.vercel.app/sub-list')
             .then(res => res.json())
             .then(data => setList(data))
     }, []);

@@ -21,7 +21,7 @@ const Header = () => {
     };
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='fixed-top'>
             <Container>
                 <img src={logo} width="30" height="30" className="align-top rounded-circle me-2" alt="" />
                 <Link className='text-decoration-none text-white fw-bold fs-4' to='/'>CS for knowing & doing</Link>
